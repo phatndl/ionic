@@ -1,0 +1,41 @@
+<div padding class="auth">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="10" offset="1">
+        <h1>LOGIN FORM</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="10" offset="1">
+        <ion-row>
+          <ion-col size="4">
+            <ion-item>
+              <ion-label position="floating"></ion-label>
+              <ion-input [(ngModel)]="prefixCountry" type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="8">
+            <ion-item>
+              <ion-label position="floating">Phone number</ion-label>
+              <ion-input [(ngModel)]="phoneNumber" type="text"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-label position="floating">Verify code</ion-label>
+          <ion-input [(ngModel)]="verifyCode" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="10" offset="1">
+        <ion-button [disabled]="!prefixCountry || !phoneNumber" expand="block" (click)="send()">Send OTP</ion-button>
+        <ion-button [disabled]="!verifyCode" color="primary" fill="outline" expand="block" (click)="verify()">Verify
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
