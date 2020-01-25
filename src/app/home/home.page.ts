@@ -12,7 +12,7 @@ export class HomePage {
   ) {
   }
 
-  navigate(url: string) {
-    this.router.navigate(['/home', url]);
-  }
+  // navigate(url: string) {
+  //   this.router.navigate(['/home', url]);
+  // }
 }

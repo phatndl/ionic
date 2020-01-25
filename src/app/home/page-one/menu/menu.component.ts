@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-
+  blockNumber: object = [
+    {}, {}, {}, {}, {},
+    {}, {}, {}, {}, {}
+  ]
   constructor() { }
 
   ngOnInit() {}

@@ -1,3 +1,41 @@
-<p>
-  header works!
-</p>
+<section class="page-one-header">
+  <header>
+    <ion-img class="page-one-header__logo" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/40706515/original/3beee79d2193ba49bfb141e841269c76029c5321/remove-background-from-logo.jpg"></ion-img>
+    <ion-button class="page-one-header__click">Click</ion-button>
+  </header>
+  <main padding>
+    <!-- Slide -->
+    <ion-slides pager={true} class="page-one-header__slides" [options]="slideOpts">
+        <ion-slide class="page-one-header__slide">
+          <img src=""/>
+        </ion-slide >
+        <ion-slide class="page-one-header__slide">
+          <img src=""/>
+        </ion-slide>
+        <ion-slide class="page-one-header__slide">
+          <img src=""/>
+        </ion-slide>
+    </ion-slides>
+    <!-- Option -->
+    <div class="page-one-header__opts">
+      <div class="page-one-header__opt">
+        <img src="assets/icon/bank.png" />
+      </div>
+      <div class="page-one-header__opt">
+        <img src="assets/icon/bank.png" />
+      </div>
+      <div class="page-one-header__opt">
+        <img src="assets/icon/bank.png" />
+      </div>
+      <div class="page-one-header__opt">
+        <img src="assets/icon/bank.png" />
+      </div>
+    </div>
+    <!-- HomePage -->
+    <div class="page-one-header__homepage">
+      <ion-icon name="card"></ion-icon>
+      <span class="page-one-header__text">Homepage</span>
+      <div class="page-one-header__something">Something</div>
+    </div>
+  </main>
+</section>

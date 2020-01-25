@@ -12,14 +12,14 @@ const routes: Routes = [
         loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
         canLoad: [AuthGuard]
       },
-      {
-        path: 'page-one',
-        loadChildren: () => import('./home/page-one/page-one.module').then( m => m.PageOnePageModule)
-      },
-      {
-        path: 'page-two',
-        loadChildren: () => import('./home/page-two/page-two.module').then( m => m.PageTwoPageModule)
-      },
+      // {
+      //   path: 'page-one',
+      //   loadChildren: () => import('./home/page-one/page-one.module').then( m => m.PageOnePageModule)
+      // },
+      // {
+      //   path: 'page-two',
+      //   loadChildren: () => import('./home/page-two/page-two.module').then( m => m.PageTwoPageModule)
+      // },
     ]
   },
   {

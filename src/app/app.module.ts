@@ -11,7 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import * as firebase from 'firebase';
 import { HeaderComponent } from './home/page-one/header/header.component';
 import { MenuComponent } from './home/page-one/menu/menu.component';
-
+import { HomePageModule } from './home/home.module';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 firebase.initializeApp(
   {
     apiKey: "AIzaSyDEuXGF95nSBVFQJDERQkZAW1TsknCZqYQ",
@@ -25,9 +26,11 @@ firebase.initializeApp(
   }
 );
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, MenuComponent],
+  declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(
+    { scrollAssist: false, scrollPadding: false }
+  ), AppRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,

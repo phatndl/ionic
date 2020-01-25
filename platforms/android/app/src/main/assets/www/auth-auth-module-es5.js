@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n  <div padding class=\"auth\">\n  <!-- <form [formGroup]\u001d=\"form\"> -->\n    <ion-grid>\n      <ion-row>\n        <ion-col size=\"10\" offset=\"1\">\n          <h1>LOGIN FORM</h1>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col size=\"10\" offset=\"1\">\n          <ion-row>\n            <ion-col size=\"4\">\n              <ion-item>\n                  <ion-label position=\"floating\"></ion-label>\n                <ion-input [(ngModel)]=\"prefixCountry\" type=\"text\"></ion-input>\n              </ion-item>\n            </ion-col>\n            <ion-col size=\"8\">\n            <ion-item>\n                <ion-label position=\"floating\">Phone number</ion-label>\n                <ion-input [(ngModel)]=\"phoneNumber\" type=\"text\"></ion-input>\n            </ion-item>\n          </ion-col>\n        </ion-row>\n        </ion-col>\n        \n        <ion-col size=\"10\" offset=\"1\">\n          <ion-item>\n            <ion-label position=\"floating\">Verify code</ion-label>\n            <ion-input [(ngModel)]=\"verifyCode\" type=\"text\"></ion-input>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col size=\"10\" offset=\"1\">\n          <ion-button [disabled]=\"!prefixCountry || !phoneNumber\" expand=\"block\" (click)=\"send()\">Send OTP</ion-button>\n          <ion-button [disabled]=\"!verifyCode\" color=\"primary\" fill=\"outline\" expand=\"block\" (click)=\"verify()\">Verify</ion-button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  <!-- </form> -->\n    <!-- <ion-input type=\"text\" placeholder=\"Enter OTP\" [(ngModel)]=\"code\"></ion-input> -->\n</div>"
+module.exports = "<div padding class=\"auth\">\r\n  <ion-grid>\r\n    <ion-row>\r\n      <ion-col size=\"10\" offset=\"1\">\r\n        <h1>LOGIN FORM</h1>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col size=\"10\" offset=\"1\">\r\n        <ion-row>\r\n          <ion-col size=\"4\">\r\n            <ion-item>\r\n              <ion-label position=\"floating\"></ion-label>\r\n              <ion-input [(ngModel)]=\"prefixCountry\" type=\"text\"></ion-input>\r\n            </ion-item>\r\n          </ion-col>\r\n          <ion-col size=\"8\">\r\n            <ion-item>\r\n              <ion-label position=\"floating\">Phone number</ion-label>\r\n              <ion-input [(ngModel)]=\"phoneNumber\" type=\"text\"></ion-input>\r\n            </ion-item>\r\n          </ion-col>\r\n        </ion-row>\r\n      </ion-col>\r\n\r\n      <ion-col size=\"10\" offset=\"1\">\r\n        <ion-item>\r\n          <ion-label position=\"floating\">Verify code</ion-label>\r\n          <ion-input [(ngModel)]=\"verifyCode\" type=\"text\"></ion-input>\r\n        </ion-item>\r\n      </ion-col>\r\n    </ion-row>\r\n    <ion-row>\r\n      <ion-col size=\"10\" offset=\"1\">\r\n        <ion-button [disabled]=\"!prefixCountry || !phoneNumber\" expand=\"block\" (click)=\"send()\">Send OTP</ion-button>\r\n        <ion-button [disabled]=\"!verifyCode\" color=\"primary\" fill=\"outline\" expand=\"block\" (click)=\"verify()\">Verify\r\n        </ion-button>\r\n      </ion-col>\r\n    </ion-row>\r\n  </ion-grid>\r\n</div>"
 
 /***/ }),
 
@@ -103,7 +103,7 @@ var AuthPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".auth {\n  background: url('auth-background.png');\n  width: 100%;\n  height: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 150px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9waGF0bmRsL0Rlc2t0b3AvZGV2L2lvbmljL3Ntcy9zcmMvYXBwL2F1dGgvYXV0aC5wYWdlLnNjc3MiLCJzcmMvYXBwL2F1dGgvYXV0aC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxzQ0FBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0VBQ0EsNEJBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9hdXRoL2F1dGgucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmF1dGh7XG4gICAgYmFja2dyb3VuZDogdXJsKFwiLi4vLi4vYXNzZXRzL2ltYWdlcy9hdXRoLWJhY2tncm91bmQucG5nXCIpO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgcGFkZGluZy10b3A6IDE1MHB4O1xuXG59IiwiLmF1dGgge1xuICBiYWNrZ3JvdW5kOiB1cmwoXCIuLi8uLi9hc3NldHMvaW1hZ2VzL2F1dGgtYmFja2dyb3VuZC5wbmdcIik7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gIHBhZGRpbmctdG9wOiAxNTBweDtcbn0iXX0= */"
+module.exports = ".auth {\n  background: url('auth-background.png');\n  width: 100%;\n  height: 100%;\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 150px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXV0aC9DOlxcVXNlcnNcXFRBSVxcRGVza3RvcFxccGhhdG5kbFxcZ2l0XFxpb25pYy9zcmNcXGFwcFxcYXV0aFxcYXV0aC5wYWdlLnNjc3MiLCJzcmMvYXBwL2F1dGgvYXV0aC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxzQ0FBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0VBQ0EsNEJBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9hdXRoL2F1dGgucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmF1dGh7XHJcbiAgICBiYWNrZ3JvdW5kOiB1cmwoXCIuLi8uLi9hc3NldHMvaW1hZ2VzL2F1dGgtYmFja2dyb3VuZC5wbmdcIik7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xyXG4gICAgcGFkZGluZy10b3A6IDE1MHB4O1xyXG5cclxufSIsIi5hdXRoIHtcbiAgYmFja2dyb3VuZDogdXJsKFwiLi4vLi4vYXNzZXRzL2ltYWdlcy9hdXRoLWJhY2tncm91bmQucG5nXCIpO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICBwYWRkaW5nLXRvcDogMTUwcHg7XG59Il19 */"
 
 /***/ }),
 
@@ -152,14 +152,6 @@ var AuthPage = /** @class */ (function () {
                 ]
             }).then(function (alertEl) { return alertEl.present(); });
         });
-        // (<any>window).FirebasePlugin.verifyPhoneNumber((credential) => {
-        //   console.log("credential: ", credential);
-        //   this.verificationId = credential.verificationId;
-        //   this.isSuccess = credential.instantVerification;
-        // }, (error) => {
-        // this.isSuccess = false;
-        //   console.error("Failed to verify phone number: " + JSON.stringify(error));
-        // }, this.prefixCountry + this.phoneNumber, 60, "12345");
     };
     AuthPage.prototype.verify = function () {
         var _this = this;
@@ -178,13 +170,7 @@ var AuthPage = /** @class */ (function () {
                     }
                 ]
             }).then(function (alertEl) { return alertEl.present(); });
-            // this.router.navigateByUrl("/home");
         });
-        // (<any>window).FirebasePlugin.signInWithCredential(this.verificationId, this.verifyCode, function() {
-        //     console.log("Successfully signed in");
-        // }, function(error) {
-        //     console.error("Failed to sign in", error);
-        // });
     };
     AuthPage.ctorParameters = function () { return [
         { type: _auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"] },

@@ -9,14 +9,16 @@ import { PageOnePageRoutingModule } from './page-one-routing.module';
 import { PageOnePage } from './page-one.page';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
-
+import { MenuModule } from './menu/menu.module';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PageOnePageRoutingModule
+    PageOnePageRoutingModule,
+    MenuModule
   ],
-  declarations: [PageOnePage, HeaderComponent, MenuComponent]
+  declarations: [PageOnePage, HeaderComponent],
+  exports: [PageOnePage]
 })
 export class PageOnePageModule {}

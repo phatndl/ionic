@@ -15,6 +15,7 @@ import { PageTwoPage } from './page-two.page';
     IonicModule,
     PageTwoPageRoutingModule
   ],
-  declarations: [PageTwoPage]
+  declarations: [PageTwoPage],
+  exports: [PageTwoPage]
 })
 export class PageTwoPageModule {}

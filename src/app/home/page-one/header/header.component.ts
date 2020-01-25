@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
+  slideOpts: object = {
+    speed: 2000,
+    slidesPerView: 1,
+    delay: 300,
+    autoplay: true  
+  };
   constructor() { }
 
   ngOnInit() {}

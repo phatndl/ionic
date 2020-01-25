@@ -441,7 +441,7 @@ module.exports = webpackAsyncContext;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-button color=\"primary\" fill=\"outline\" (click)=\"navigate('auth')\">Auth</ion-button>\n  <ion-button color=\"secondary\" (click)=\"navigate()\">Home</ion-button>\n  <ion-button (click)=\"show()\">Show</ion-button>\n  <ion-router-outlet></ion-router-outlet>\n</ion-app>\n"
+module.exports = "<ion-app>\r\n  <ion-router-outlet></ion-router-outlet>\r\n</ion-app>\r\n"
 
 /***/ }),
 
@@ -467,13 +467,18 @@ const routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     {
         path: 'home',
-        loadChildren: () => __webpack_require__.e(/*! import() | home-home-module */ "home-home-module").then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomePageModule),
-        canLoad: [_auth_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
+        children: [
+            {
+                path: '',
+                loadChildren: () => __webpack_require__.e(/*! import() | home-home-module */ "home-home-module").then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomePageModule),
+                canLoad: [_auth_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
+            },
+        ]
     },
     {
         path: 'auth',
         loadChildren: () => __webpack_require__.e(/*! import() | auth-auth-module */ "auth-auth-module").then(__webpack_require__.bind(null, /*! ./auth/auth.module */ "./src/app/auth/auth.module.ts")).then(m => m.AuthPageModule)
-    },
+    }
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -516,19 +521,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
 /* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-
 
 
 
 
 
 let AppComponent = class AppComponent {
-    constructor(platform, splashScreen, statusBar, router) {
+    constructor(platform, splashScreen, statusBar) {
         this.platform = platform;
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
-        this.router = router;
         this.initializeApp();
     }
     initializeApp() {
@@ -537,19 +539,11 @@ let AppComponent = class AppComponent {
             this.splashScreen.hide();
         });
     }
-    navigate(url) {
-        console.log("url: ", url);
-        this.router.navigateByUrl(url);
-    }
-    show() {
-        alert("show");
-    }
 };
 AppComponent.ctorParameters = () => [
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] },
     { type: _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"] },
-    { type: _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    { type: _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"] }
 ];
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -559,8 +553,7 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
         _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"],
-        _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"],
-        _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+        _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"]])
 ], AppComponent);
 
 
@@ -598,6 +591,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 firebase__WEBPACK_IMPORTED_MODULE_9__["initializeApp"]({
     apiKey: "AIzaSyDEuXGF95nSBVFQJDERQkZAW1TsknCZqYQ",
     authDomain: "phone-authen-d25c8.firebaseapp.com",
@@ -794,7 +788,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/phatndl/Desktop/dev/ionic/sms/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\TAI\Desktop\phatndl\git\ionic\src\main.ts */"./src/main.ts");
 
 
 /***/ })

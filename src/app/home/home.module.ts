@@ -9,6 +9,8 @@ import { PageOnePage } from './page-one/page-one.page';
 import { PageTwoPage } from './page-two/page-two.page';
 import { HeaderComponent } from './page-one/header/header.component';
 import { MenuComponent } from './page-one/menu/menu.component';
+import { PageOnePageModule } from './page-one/page-one.module';
+import { PageTwoPageModule } from './page-two/page-two.module';
 
 @NgModule({
   imports: [
@@ -18,10 +20,20 @@ import { MenuComponent } from './page-one/menu/menu.component';
     RouterModule.forChild([
       {
         path: '',
-        component: HomePage
+        component: HomePage,
+        children: [
+          {
+            path: 'page-one',
+            loadChildren: () => import('./page-one/page-one.module').then( m => m.PageOnePageModule)
+          },
+          {
+            path: 'page-two',
+            loadChildren: () => import('./page-two/page-two.module').then( m => m.PageTwoPageModule)
+          },
+        ]
       }
     ])
   ],
-  declarations: [HomePage, PageOnePage, PageTwoPage]
+  declarations: [HomePage]
 })
 export class HomePageModule {}

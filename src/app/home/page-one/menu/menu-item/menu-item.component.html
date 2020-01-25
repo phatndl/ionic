@@ -1,0 +1,11 @@
+<div class="page-one-menu__item">
+  <div class="page-one-menu__background"></div>
+  <div class="" 
+    *ngFor="let el of blockNumber; let i = index" [class]="[i % 2 === 0 ? 'page-one-menu__block page-one-menu__block--left' : 'page-one-menu__block page-one-menu__block--right']">
+    <div class="page-one-menu__ball"></div>
+    <div class="page-one-menu__content">
+      <strong>Title</strong>
+      <p>Something else</p>
+    </div>
+  </div>
+</div>
