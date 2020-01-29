@@ -3,6 +3,7 @@ import { PlacesService } from '../places.service';
 import { Place } from '../places.model';
 import { MenuController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
+import { take } from 'rxjs/operators';
 import { SegmentChangeEventDetail } from '@ionic/core';
 import { AuthService } from 'src/app/auth/auth.service';
 @Component({
@@ -42,7 +43,12 @@ export class DiscoverPage implements OnInit, OnDestroy {
       this.relevantPlaces = this.loadedPlaces;
     }
     else{
-      this.relevantPlaces = this.loadedPlaces.filter(place => place.userId === this.authService.userId);
+      this.authService.userId.pipe(take(1)).subscribe(id => {
+        if (!id){
+          return;
+        }
+        this.relevantPlaces = this.loadedPlaces.filter(place => place.userId === id);
+      })
     }
   }
 }

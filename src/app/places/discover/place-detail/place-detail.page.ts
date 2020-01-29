@@ -5,6 +5,8 @@ import { CreateBookingsComponent } from '../../../bookings/create-bookings/creat
 import { Place } from '../../places.model';
 import { PlacesService } from '../../places.service';
 import { Subscription } from 'rxjs';
+import { AuthService } from 'src/app/auth/auth.service';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-place-detail',
@@ -19,7 +21,8 @@ export class PlaceDetailPage implements OnInit, OnDestroy {
     private navCtrl: NavController,
     private modalCtrl: ModalController,
     private placeService: PlacesService,
-    private actionSheet: ActionSheetController
+    private actionSheet: ActionSheetController,
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -28,7 +31,13 @@ export class PlaceDetailPage implements OnInit, OnDestroy {
         this.navCtrl.navigateBack("/places/tabs/discover");
         return;
       }
-      this.placeService.getPlace(paramMap.get('placeId')).subscribe(place => {
+
+      this.authService.userId.pipe(switchMap(userId => {
+        if (!userId){
+          throw new Error("Found no user");
+        }
+        return this.placeService.getPlace(paramMap.get('placeId'));
+      })).subscribe(place => {
         this.place = place;
       });
       console.log("this.place: ", this.place);

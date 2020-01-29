@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "266797744633",
+    "firebase_url": "https://ionic-sms-3f4b2.firebaseio.com",
+    "project_id": "ionic-sms-3f4b2",
+    "storage_bucket": "ionic-sms-3f4b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266797744633:android:bfb8b81880d601e04c7d28",
+        "android_client_info": {
+          "package_name": "io.ionic.sms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266797744633-86hfm8i5ra2vi3h0tg2c1oua2fn0hjdm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.ionic.sms",
+            "certificate_hash": "079693db09f8ab196712ce89bb2f886c25a4974b"
+          }
+        },
+        {
+          "client_id": "266797744633-2gdsit7rbahkge3n0io0atepr2tapu7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWADSYjwRvL19rDkYA_uW8Cacpzf5hlLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266797744633-2gdsit7rbahkge3n0io0atepr2tapu7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
